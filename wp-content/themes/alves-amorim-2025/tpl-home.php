@@ -90,7 +90,7 @@ get_template_part('includes/components/header', 'header');
                             Catarina, Pernambuco e Rondônia. Atua com tecnologia profissionalmente desde 2001.
                         </li>
                     </ul>
-                    <a class="text-blue-300 text-lg font-bold block underline" href="">Saiba mais</a>
+                    <a class="link-default" href="">Saiba mais</a>
                 </div>
 
                 <img width="709" height="792" class="absolute right-0 bottom-0"
@@ -99,58 +99,247 @@ get_template_part('includes/components/header', 'header');
         </div>
     </section>
 
-   <section class="bg-white py-24">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-black mb-4">Por quê nos escolher?</h2>
-      <p class="text-lg text-gray-500">Características</p>
-    </div>
+    <section class="bg-gray-100 relative">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <!-- Item -->
-      <div class="flex items-start space-x-4">
-        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
-          <!-- Replace with your icon -->
-          <span class="text-blue-500 font-bold text-xl">✓</span>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-black mb-1">Experiência Comprovada</h3>
-        </div>
-      </div>
+        <img class="absolute left-0 right-0 mx-auto top-[50%] translate-y-[-50%] max-w-[80%]"
+            src="<?php echo image_dir('logo-vector-bg-choice.svg'); ?>" alt="">
 
-      <!-- Item -->
-      <div class="flex items-start space-x-4">
-        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
-          <span class="text-blue-500 font-bold text-xl">✓</span>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-black mb-1">Equipe Especializada</h3>
-        </div>
-      </div>
+        <div class="container py-24 relative z-10">
 
-      <!-- Item -->
-      <div class="flex items-start space-x-4">
-        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
-          <span class="text-blue-500 font-bold text-xl">✓</span>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-black mb-1">Compromisso com a Ética</h3>
-        </div>
-      </div>
+            <div class="flex flex-col flex-wrap w-full items-start justify-center text-center mb-10">
+                <p class="text-lg text-blue-300 mb-4 text-center w-full font-bold">
+                    Características
+                </p>
+                <h2 class="section-title text-black text-center w-full">
+                    Por quê nos escolher?
+                </h2>
+            </div>
 
-      <!-- Item -->
-      <div class="flex items-start space-x-4">
-        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
-          <span class="text-blue-500 font-bold text-xl">✓</span>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-black mb-1">Reconhecimento no Mercado</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="grid grid-cols-2 gap-6">
 
+                <div class="card bg-white py-6 px-4 rounded-xl shadow-md">
+                    <img class="mb-4" width="56" height="56" src="<?php echo image_dir('icon-choice-1.svg'); ?>" alt="">
+                    <h3 class="text-2xl font-bold text-black mb-4">
+                        Experiência Comprovada
+                    </h3>
+                    <p class="text-gray-400 text-xl">
+                        Com mais de 21 anos de atuação, acumulamos conhecimento sólido em perícia forense digital,
+                        garantindo precisão e confiabilidade na análise de evidências.
+                    </p>
+                </div>
+
+                <div class="card bg-white py-6 px-4 rounded-xl shadow-md">
+                    <img class="mb-4" width="56" height="56" src="<?php echo image_dir('icon-choice-2.svg'); ?>" alt="">
+                    <h3 class="text-2xl font-bold text-black mb-4">
+                        Equipe Especializada
+                    </h3>
+                    <p class="text-gray-400 text-xl">
+                        Nossos peritos possuem expertise em informática, telecomunicações e tecnologia, oferecendo
+                        soluções personalizadas para cada caso.
+                    </p>
+                </div>
+
+                <div class="card bg-white py-6 px-4 rounded-xl shadow-md">
+                    <img class="mb-4" width="56" height="56" src="<?php echo image_dir('icon-choice-3.svg'); ?>" alt="">
+                    <h3 class="text-2xl font-bold text-black mb-4">
+                        Compromisso com a Ética
+                    </h3>
+                    <p class="text-gray-400 text-xl">
+                        Transparência, responsabilidade e inovação guiam nosso trabalho, assegurando resultados
+                        confiáveis e alinhados às melhores práticas do setor.
+                    </p>
+                </div>
+
+                <div class="card bg-white py-6 px-4 rounded-xl shadow-md">
+                    <img class="mb-4" width="56" height="56" src="<?php echo image_dir('icon-choice-4.svg'); ?>" alt="">
+                    <h3 class="text-2xl font-bold text-black mb-4">
+                        Reconhecimento no Mercado
+                    </h3>
+                    <p class="text-gray-400 text-xl">
+                        Somos referência no segmento, atuando junto a grandes escritórios de advocacia, tribunais e
+                        empresas de todo o Brasil.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-gray-100 relative">
+        <div class="container grid grid-cols-2 gap-x-10 py-16">
+            <div>
+                <p class="text-lg text-blue-300 mb-4 w-full">
+                    COMPETÊNCIAS
+                </p>
+                <h2 class="section-title mb-6 text-black w-full">
+                    Nossas habilidades
+                </h2>
+                <p class="text-gray-400 text-xl mb-4">
+                    Somos especialistas em <b>perícia forense digital</b>, atuando na análise, coleta e preservação de
+                    evidências digitais. Com expertise técnica e compromisso ético, oferecemos suporte essencial em
+                    diversas áreas.
+                </p>
+                <p class="text-gray-400 text-xl mb-4">
+                    Na <b>Assistência Técnica Judicial</b>, ajudamos advogados e empresas com pareceres técnicos,
+                    elaboração de
+                    quesitos e impugnação de laudos periciais. Em <b>Investigação Corporativa</b>, lidamos com crimes
+                    cibernéticos, vazamento de dados e ataques digitais, protegendo informações estratégicas.
+                </p>
+                <p class="text-gray-400 text-xl mb-4">
+                    Nossa atuação em <b>Perícia Judicial</b> contribui para a inclusão de provas técnicas em processos,
+                    auxiliando na busca por decisões justas. Já na Investigação <b>Criminal Tecnológica</b>, analisamos
+                    processos para contestação de provas obtidas de forma indevida, fortalecendo estratégias de defesa
+                    legal.
+                </p>
+                <p class="text-gray-400 text-xl mb-6">
+                    Com experiência e inovação, nos destacamos no setor, entregando análises precisas e seguras para
+                    casos judiciais e corporativos.
+                </p>
+                <a class="link-default" href="">Conheça nossos Serviços</a>
+            </div>
+        </div>
+        <img width="920" height="659" class="absolute rounded-l-xl right-0 top-[55%] translate-y-[-50%] max-w-[40vw]"
+            src="<?php echo image_dir('dr-alves-amorim.jpg'); ?>" alt="">
+    </section>
+
+    <section class="bg-black relative overflow-hidden">
+        <div class="container py-28">
+
+            <div class="flex flex-col flex-wrap w-full items-start justify-center text-center mb-10">
+
+                <p class="text-lg text-blue-300 mb-4 text-center w-full font-bold">
+                    DEPOIMENTOS
+                </p>
+                <h2 class="section-title text-white text-center w-full mb-20">
+                    Palavras de clientes
+                </h2>
+
+                <div class="lg:w-[90vw]">
+                    <div class="swiper customer-swiper">
+                        <div class="swiper-wrapper">
+                            <?php $i = 0;
+                            while ($i < 8):
+                                $i++; ?>
+                                <div class="swiper-slide customer-slide text-left">
+                                    <p class="text-xl mb-4 text-white">Estou extremamente satisfeito com os serviços da
+                                        Alves Amorim. Eles demonstraram um profundo conhecimento e uma abordagem
+                                        excepcionalmente dedicada ao meu caso.</p>
+                                    <div class="flex flex-row justify-start items-center gap-x-6">
+                                        <img class="rounded-full overflow-hidden" width="64" height="64"
+                                            src="<?php echo image_dir('avatar.jpg') ?>" alt="">
+                                        <p class="text-lg text-white">
+                                            Analua Mota
+                                            <span class="block text-gray-400">
+                                                Cliente
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <img class="absolute left-0 bottom-0" src="<?php echo image_dir('vector-customers.svg'); ?>" alt="">
+
+        </div>
+
+        <div class="ellipsis w-[463px] h-[379px] lg:-top-20 lg:-right-20 xl:-top-40 xl:-right-40"></div>
+
+    </section>
+
+    <section class="bg-gray-100 py-24">
+
+        <div class="marquee mb-10">
+            <div class="track">
+                <?php $i = 0;
+                while ($i < 12):
+                    $i++; ?>
+                    <div class="slide brand-slide">
+                        <img width="250" height="100" src="https://place-hold.it/250x100" alt="">
+                    </div>
+                <?php endwhile ?>
+            </div>
+        </div>
+        <div class="marquee">
+            <div class="track track-reverse">
+                <?php $i = 0;
+                while ($i < 12):
+                    $i++; ?>
+                    <div class="slide brand-slide">
+                        <img width="250" height="100" src="https://place-hold.it/250x100" alt="">
+                    </div>
+                <?php endwhile ?>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="blog bg-gray-100">
+        <div class="container pb-20">
+
+            <div class="flex flex-row flex-nowrap justify-between">
+                <div>
+                    <p class="text-blue-300 font-bold text-lg mb-4">
+                        NOSSO BLOG
+                    </p>
+                    <h2 class="section-title mb-20 text-black">Artigos e Notícias</h2>
+                </div>
+                <a class="underline text-gray-400 font-bold flex flex-row flex-nowrap items-center justify-start gap-x-2" href="">
+                    Ver tudo
+                    <img width="18" height="18" src="<?php echo image_dir('chevron-right.svg'); ?>" alt="">
+                </a>
+            </div>
+
+            <div class="grid grid-cols-6 grid-rows-4 gap-x-8 gap-y-4">
+                <div
+                    class="col-span-3 row-span-4 flex flex-col items-start justify-start rounded-xl bg-white overflow-hidden">
+                    <img class="w-full object-cover" width="730" height="320" src="https://place-hold.it/780x320"
+                        alt="">
+                    <div class="content p-8">
+                        <div class="text-lg text-gray-400 mb-6">
+                            03/03/2025
+                        </div>
+                        <h3 class="text-black text-2xl">
+                            Crime cibernético do ECA e o perito atuando pela defesa
+                        </h3>
+                    </div>
+                </div>
+                <div
+                    class="col-span-3 row-span-2 col-start-4 flex flex-row items-start justify-start h-full rounded-xl bg-white overflow-hidden">
+                    <img class="h-full w-auto object-cover" width="260" height="220" src="https://place-hold.it/260x220"
+                        alt="" />
+                    <div class="content p-8 flex flex-col items-start justify-end w-full h-full">
+                        <div class="text-lg text-gray-400 mb-4">
+                            03/03/2025
+                        </div>
+                        <h3 class="text-black text-2xl w-full">
+                            Como contratar uma investigação forense?
+                        </h3>
+                    </div>
+                </div>
+
+                <div
+                    class="col-span-3 row-span-2 col-start-4 row-start-3 flex flex-row items-start justify-start h-full rounded-xl bg-white overflow-hidden">
+
+                    <img class="h-full w-auto object-cover" width="260" height="220" src="https://place-hold.it/260x220"
+                        alt="" />
+                    <div class="content p-8 flex flex-col items-start justify-end w-full h-full">
+                        <div class="text-lg text-gray-400 mb-4">
+                            03/03/2025
+                        </div>
+                        <h3 class="text-black text-2xl w-full">
+                            Perito judicial digital: quais as vantagens de contratar?
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 </main>
 <?php get_template_part('includes/components/footer', 'footer'); ?>

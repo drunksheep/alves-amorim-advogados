@@ -4,11 +4,74 @@
 @tailwind components;
 @tailwind utilities;
 
+body,
+html {
+    overflow-x: hidden;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
 
 @layer base {
     html {
         font-family: 'Inter', system-ui, sans-serif;
     }
+}
+
+.marquee {
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 30s linear infinite;
+}
+
+.track-reverse {
+    animation: scroll-right 30s linear infinite;
+}
+
+.slide {
+    flex: 0 0 auto;
+    margin-right: 32px;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+
+.brand-swiper-carousel {
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.brand-swiper .swiper-slide {
+    width: auto;
 }
 
 @layer utilities {
@@ -23,6 +86,14 @@
     .min-h-54 {
         min-height: 54px;
     }
+
+    .backdrop-blur-22 {
+        backdrop-filter: blur(21.899999618530273px)
+    }
+
+    .backdrop-blur-380 {
+        backdrop-filter: blur(379.8999938964844px)
+    }
 }
 
 @layer components {
@@ -32,5 +103,17 @@
 
     .btn-default {
         @apply max-w-300 min-h-54 py-2 px-8 rounded-xl font-bold text-xl inline-flex items-center justify-center gap-x-2 border
+    }
+
+    .link-default {
+        @apply text-blue-300 underline text-xl font-bold hover:text-blue-400 transition duration-300
+    }
+
+    .customer-slide {
+        @apply border border-white py-10 px-6 rounded-2xl backdrop-blur-22 bg-white/10
+    }
+
+    .ellipsis {
+        @apply absolute bg-blue-300 backdrop-blur-380 rounded-full blur-2xl opacity-65
     }
 }

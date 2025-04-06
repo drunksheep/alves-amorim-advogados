@@ -222,12 +222,12 @@ get_template_part('includes/components/header', 'header');
             src="<?php echo image_dir('dr-alves-amorim.jpg'); ?>" alt="">
     </section>
 
-    <section class="bg-black relative overflow-hidden">
+    <section class="bg-black relative overflow-hidden" id="depoimentos">
         <div class="container py-20 lg:py-28">
 
             <div class="flex flex-col flex-wrap w-full items-start justify-center lg:text-center mb-10">
 
-                <p class="tagline">
+                <p class="tagline lg:text-center w-full">
                     DEPOIMENTOS
                 </p>
                 <h2 class="text-left lg:text-center section-title text-white w-full mb-10 lg:mb-20">

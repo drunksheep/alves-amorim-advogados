@@ -4,11 +4,11 @@
             <li class="text-gray-400">
                 Início
             </li>
-            <li>Serviços</li>
-            <li>Sobre nós</li>
-            <li>Depoimentos</li>
-            <li>Blog</li>
-            <li>Contato</li>
+            <li class><a class="duration-300 transition hover:text-blue-300 hover:underline" href="<?php echo site_url('/servicos') ?>">Serviços</a></li>
+            <li class><a class="duration-300 transition hover:text-blue-300 hover:underline" href="<?php echo site_url('/sobre-nos') ?>">Sobre nós</a></li>
+            <li class><a class="duration-300 transition hover:text-blue-300 hover:underline" href="<?php echo site_url('/#depoimentos') ?>">Depoimentos</a></li>
+            <li class><a class="duration-300 transition hover:text-blue-300 hover:underline" href="<?php echo site_url('/blog') ?>">Blog</a></li>
+            <li class><a class="duration-300 transition hover:text-blue-300 hover:underline" href="<?php echo site_url('/contato') ?>">Contato</a></li>
         </ul>
         <ul class="text-white text-xl flex flex-col items-start justify-start gap-y-4">
             <li class="text-gray-400">

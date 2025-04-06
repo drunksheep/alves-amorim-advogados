@@ -7,10 +7,10 @@ get_template_part('includes/components/header', 'header');
 <main class="bg-black">
 
     <section class="relative">
-        <img class="fullwidth-bg" src="<?php echo image_dir('bg-service-1.jpg'); ?>" alt="">
-        <div class="container relative z-10 flex flex-col flex-wrap justify-end items-start min-h-[640px] pb-24">
+        <img class="fullwidth-bg object-cover" src="<?php echo image_dir('bg-service-1.jpg'); ?>" alt="">
+        <div class="container relative z-10 flex flex-col flex-wrap justify-end items-start lg:min-h-[640px] py-32 lg:pt-0 lg:pb-24">
             <?php get_template_part('includes/components/breadcrumb', 'breadcrumb') ?>
-            <div class="flex flex-row flex-wrap items-center justify-start gap-x-6">
+            <div class="flex flex-row flex-nowrap items-center justify-start gap-x-6">
                 <img class="filter brightness-0 invert" width="80" height="80"
                     src="<?php echo image_dir('hammer.svg'); ?>" alt="">
                 <h1 class="section-title text-white"><?php the_title(); ?></h1>
@@ -19,7 +19,7 @@ get_template_part('includes/components/header', 'header');
     </section>
 
     <section class=" bg-gray-100 py-20">
-        <div class="container flex flex-row flex-nowrap justify-start items-start gap-x-10">
+        <div class="container flex flex-col lg:flex-row flex-wrap lg:flex-nowrap justify-start items-start lg:gap-x-10 gap-y-10 lg:gap-y-0">
             <div class="lg:max-w-[65%] content-wrapper">
                 <?php the_content(); ?>
             </div>

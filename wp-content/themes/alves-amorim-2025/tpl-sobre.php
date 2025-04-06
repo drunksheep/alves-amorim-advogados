@@ -6,9 +6,9 @@ get_template_part('includes/components/header', 'header');
 ?>
 <main>
 
-    <section class="bg-gray-100 py-24">
-        <div class="container flex flex-row flex-nowrap items-center justify-start rounded-xl overflow-hidden bg-white">
-            <div class="py-20 px-10 pr-32 rounded-l-xl">
+    <section class="bg-gray-100 py-12">
+        <div class="container flex flex-col-reverse lg:flex-row flex-wrap lg:flex-nowrap items-center justify-start rounded-xl overflow-hidden bg-white">
+            <div class="py-10 lg:py-20 px-10 lg:pr-32 rounded-l-xl">
                 <p class="text-blue-300 text-lg mb-4 font-bold">
                     Vamos te ajudar
                 </p>
@@ -26,8 +26,8 @@ get_template_part('includes/components/header', 'header');
     </section>
 
     <section class="bg-gray-100">
-        <div class="container flex flex-row items-center flex-nowrap justify-between gap-x-16">
-            <img width="513" height="769" src="<?php echo image_dir('alves-amorim-about-image-2.png'); ?>" alt="">
+        <div class="container flex lg:flex-row items-start lg:items-center flex-wrap lg:flex-nowrap justify-start lg:justify-between lg:gap-x-16 gap-y-8 lg:gap-y-0">
+            <img class="h-auto" width="513" height="769" src="<?php echo image_dir('alves-amorim-about-image-2.png'); ?>" alt="">
             <div>
                 <p class="text-blue-300 text-lg mb-4 font-bold">
                     O QUE FAZEMOS
@@ -54,13 +54,12 @@ get_template_part('includes/components/header', 'header');
 
     <section class="bg-gray-100 relative">
 
-        <img class="absolute left-0 top-10" src="<?php echo image_dir('vector-bg-gray.svg'); ?>" alt="">
+        <img class="hidden lg:block absolute left-0 top-10" src="<?php echo image_dir('vector-bg-gray.svg'); ?>" alt="">
 
-        <img class="absolute right-0 top-10 scale-x-[-1] " src="<?php echo image_dir('vector-bg-gray.svg'); ?>" alt="">
+        <img class="hidden lg:block  absolute right-0 top-10 scale-x-[-1] " src="<?php echo image_dir('vector-bg-gray.svg'); ?>" alt="">
 
-
-        <div class="container flex flex-row flex-nowrap items-center justify-between gap-x-10 pt-24">
-            <div class="w-4/12">
+        <div class="container flex flex-col lg:flex-row flex-wrap lg:flex-nowrap items-start lg:items-center justify-start lg:justify-between lg:gap-x-10 pt-24">
+            <div class="lg:w-4/12">
                 <p class="text-blue-300 text-lg mb-4 font-bold">
                     O QUE FAZEMOS
                 </p>
@@ -68,7 +67,7 @@ get_template_part('includes/components/header', 'header');
                 No que acreditamos
                 </h2>
             </div>
-            <p class="text-lg text-gray-400 w-8/12">
+            <p class="text-lg text-gray-400 lg:w-8/12">
                 Em primeiro lugar, somos parceiros dos nossos clientes e estamos comprometidos em preparar o caminho
                 para <b>resolver problemas computacionais</b> que exigem tanta responsabilidade e competência. Nosso principal
                 foco é ajudar as empresas e tribunais solucionar os <b>crimes cibernéticos</b> com a experiência de mais de 20

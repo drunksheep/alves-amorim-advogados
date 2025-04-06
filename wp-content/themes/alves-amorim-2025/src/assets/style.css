@@ -2,31 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/Inter.woff2') format('woff2-variations');
-    font-weight: 100 900;
-    font-stretch: 75% 125%;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Nexa';
-    src: url('/fonts/NexaRegular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Nexa';
-    src: url('/fonts/Nexa-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -90,6 +65,30 @@ body:not(.home) {
 }
 
 
+
+
+@media screen and (max-width: 1024px) {
+
+    body:not(.home) {
+        margin-top: 85px;
+    }
+    
+    #header-menu {
+        transition: all .35s ease-in-out;
+    }
+
+    #header-menu:not(.is-open) {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    body,
+    html {
+        overflow-x: hidden;
+    }
+}
+
+
 @keyframes scroll-left {
     from {
         transform: translateX(0);
@@ -125,9 +124,19 @@ body:not(.home) {
     box-shadow: theme('boxShadow.lg');
 }
 
-body.home .scrolled {
-    transform: translateY(-60px);
+.scrolled .hamburger-inner,
+.scrolled .hamburger-inner::before,
+.scrolled .hamburger-inner::after {
+    background-color: #000;
 }
+
+
+@media screen and (min-width: 1025px) {
+    body.home .scrolled {
+        transform: translateY(-60px);
+    }
+}
+
 
 .scrolled ul {
     color: theme('colors.gray.400');
@@ -194,7 +203,7 @@ body.home .scrolled {
 
 @layer components {
     .section-title {
-        @apply text-5xl text-gray-400 font-bold
+        @apply text-2xl lg:text-5xl text-gray-400 font-bold
     }
 
     .tagline {
@@ -230,7 +239,7 @@ body.home .scrolled {
     }
 
     .breadcrumb {
-        @apply text-white flex flex-row flex-nowrap items-center justify-start gap-x-2 mb-10
+        @apply text-xs lg:text-base text-white flex flex-row flex-nowrap items-center justify-start gap-x-2 mb-10
     }
 
     .breadcrumb a:hover {
@@ -312,4 +321,97 @@ body.home .scrolled {
     .post-card-title {
         @apply text-black text-2xl hover:text-blue-300 transition duration-300
     }
+}
+
+/* mobile hamburger */
+
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    padding-top: 15px;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: #FFF;
+}
+
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #FFF;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::before {
+    top: -10px;
+}
+
+.hamburger-inner::after {
+    bottom: -10px;
+}
+
+/*
+   * 3DX
+   */
+.hamburger--3dx .hamburger-box {
+    perspective: 80px;
+}
+
+.hamburger--3dx .hamburger-inner {
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dx .hamburger-inner::before,
+.hamburger--3dx .hamburger-inner::after {
+    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dx.is-active .hamburger-inner {
+    background-color: transparent !important;
+    transform: rotateY(180deg);
+}
+
+.hamburger--3dx.is-active .hamburger-inner::before {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger--3dx.is-active .hamburger-inner::after {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
 }

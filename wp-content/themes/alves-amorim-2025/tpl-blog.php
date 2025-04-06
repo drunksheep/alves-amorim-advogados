@@ -21,11 +21,11 @@ get_template_part('includes/components/header', 'header');
 
             <section class="bg-gray-100 py-24">
                 <div class="container">
-                    <div class="flex flex-row flex-nowrap items-start justify-start gap-x-10">
-                        <div class="relative w-7/12 lg:min-h-[630px]">
+                    <div class="flex flex-col lg:flex-row flex-wrap lg:flex-nowrap items-start justify-start lg:gap-x-10">
+                        <div class="relative w-full lg:w-7/12 aspect-square lg:aspect-none lg:min-h-[630px] mb-6 lg:mb-0">
                             <?php the_post_thumbnail('full', ['class' => 'rounded-xl overflow-hidden fullwidth-bg object-cover']); ?>
                         </div>
-                        <div class="w-5/12">
+                        <div class="lg:w-5/12">
                             <p class="tagline">NOVO</p>
                             <h1 class="section-title text-black mb-6"><?php the_title(); ?></h1>
                             <p class="text-gray-400 text-lg mb-6">
@@ -48,7 +48,7 @@ get_template_part('includes/components/header', 'header');
                 <p class="tagline">TODOS OS ARTIGOS</p>
                 <h2 class="section-title text-black">Confira todos os artigos</h>
 
-                <div class="grid grid-cols-3 gap-10 mt-10">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10">
 
                     <?php $i = 0; while ( $i < 6 ) : $i++; ?>
 

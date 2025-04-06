@@ -1,6 +1,5 @@
-import { Autoplay } from 'swiper/modules';
 import { swiperFactory } from './carousel';
-import { toggleHeader } from './header';
+import { mobileHeader, toggleHeader } from './header';
 import buildHeadingList from './images/toc';
 import './style.css';
 
@@ -10,32 +9,24 @@ window.addEventListener('load', function () {
     wpVars &&
         console.log(wpVars);
 
+
+        
+    mobileHeader();
+
     const customerSwiper = this.document.querySelector('.customer-swiper') as HTMLElement;
 
     customerSwiper &&
         swiperFactory(customerSwiper, {
             loop: false,
-            spaceBetween: "32px",
-            slidesPerView: 3.3,
+            slidesPerView: 1.2,
+            spaceBetween: "10px",
+            breakpoints: {
+                1025: {
+                    slidesPerView: 3.3,
+                    spaceBetween: "32px",
+                }
+            }
         })
-
-    const brandSwiper = this.document.querySelector('.brand-swiper') as HTMLElement;
-
-    brandSwiper &&
-        swiperFactory('.brand-swiper', {
-            loop: true,
-            slidesPerView: 'auto',
-            centeredSlides: false,
-            spaceBetween: 20,
-            speed: 6000, // long duration for slow movement
-            autoplay: {
-                delay: 0, // no delay between transitions
-                disableOnInteraction: false,
-                pauseOnMouseEnter: false,
-            },
-            allowTouchMove: false, // optional: disable user dragging
-            modules: [Autoplay],
-        });
 
     this.addEventListener('scroll', toggleHeader);
 
@@ -48,11 +39,11 @@ window.addEventListener('load', function () {
 
         const sharer = sidebar.querySelector('.sharer');
         if (sharer) {
-          sharer.before(toc);
+            sharer.before(toc);
         } else {
-          sidebar.appendChild(toc); // fallback
+            sidebar.appendChild(toc); // fallback
         }
-        
+
 
         const tocLinks = sidebar.querySelectorAll('li[data-id]');
 

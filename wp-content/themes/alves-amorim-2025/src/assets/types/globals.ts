@@ -5,6 +5,7 @@ declare global {
             ajax_url: string;
             theme_image_dir : string;
             current_queried_object: any;
+            is_home: string;
         }
     }
 }

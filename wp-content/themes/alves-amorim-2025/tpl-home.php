@@ -221,14 +221,14 @@ get_template_part('includes/components/header', 'header');
                             <?php $i = 0;
                             while ($i < 8):
                                 $i++; ?>
-                                <div class="swiper-slide customer-slide text-left">
-                                    <p class="text-xl mb-4 text-white">Estou extremamente satisfeito com os serviços da
+                                <div class="swiper-slide customer-slide text-left group transition duration-300">
+                                    <p class="text-xl mb-4 text-white group-hover:text-gray-400 transition duration-300">Estou extremamente satisfeito com os serviços da
                                         Alves Amorim. Eles demonstraram um profundo conhecimento e uma abordagem
                                         excepcionalmente dedicada ao meu caso.</p>
                                     <div class="flex flex-row justify-start items-center gap-x-6">
                                         <img class="rounded-full overflow-hidden" width="64" height="64"
                                             src="<?php echo image_dir('avatar.jpg') ?>" alt="">
-                                        <p class="text-lg text-white">
+                                        <p class="text-lg text-white group group-hover:text-blue-300 transition duration-300">
                                             Analua Mota
                                             <span class="block text-gray-400">
                                                 Cliente
@@ -251,35 +251,10 @@ get_template_part('includes/components/header', 'header');
 
     </section>
 
-    <section class="bg-gray-100 py-24">
-
-        <div class="marquee mb-10">
-            <div class="track">
-                <?php $i = 0;
-                while ($i < 12):
-                    $i++; ?>
-                    <div class="slide brand-slide">
-                        <img width="250" height="100" src="https://place-hold.it/250x100" alt="">
-                    </div>
-                <?php endwhile ?>
-            </div>
-        </div>
-        <div class="marquee">
-            <div class="track track-reverse">
-                <?php $i = 0;
-                while ($i < 12):
-                    $i++; ?>
-                    <div class="slide brand-slide">
-                        <img width="250" height="100" src="https://place-hold.it/250x100" alt="">
-                    </div>
-                <?php endwhile ?>
-            </div>
-        </div>
-
-    </section>
+    <?php get_template_part('includes/components/marquee', 'marquee') ?>
 
     <section class="blog bg-gray-100">
-        <div class="container pb-20">
+        <div class="container pb-28">
 
             <div class="flex flex-row flex-nowrap justify-between">
                 <div>
@@ -288,7 +263,8 @@ get_template_part('includes/components/header', 'header');
                     </p>
                     <h2 class="section-title mb-20 text-black">Artigos e Notícias</h2>
                 </div>
-                <a class="underline text-gray-400 font-bold flex flex-row flex-nowrap items-center justify-start gap-x-2" href="">
+                <a class="underline text-gray-400 font-bold flex flex-row flex-nowrap items-center justify-start gap-x-2"
+                    href="">
                     Ver tudo
                     <img width="18" height="18" src="<?php echo image_dir('chevron-right.svg'); ?>" alt="">
                 </a>
@@ -340,6 +316,8 @@ get_template_part('includes/components/header', 'header');
 
         </div>
     </section>
+
+    <?php get_template_part('includes/components/pre-footer', 'pre-footer'); ?>
 
 </main>
 <?php get_template_part('includes/components/footer', 'footer'); ?>

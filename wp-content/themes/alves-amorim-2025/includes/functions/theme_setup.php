@@ -31,7 +31,8 @@ Class Theme_setup {
             'stylesheet_uri' => get_stylesheet_directory_uri(), 
             'ajax_url' => admin_url('admin-ajax.php'),
             'current_queried_object' => get_queried_object(), 
-            'theme_image_dir' => get_stylesheet_directory_uri() . '/src/assets/images/'
+            'theme_image_dir' => get_stylesheet_directory_uri() . '/src/assets/images/',
+            'is_home' => is_page('home')
         ]);
     }
 }

@@ -18,7 +18,8 @@ export default {
       },
       extend: {
         fontFamily: {
-          inter: 'Inter, sans-serif'
+          inter: ['Inter', 'sans-serif'],
+          nexa: ['Nexa', 'sans-serif']
         },
         screens: {
           'xs':'320px',
@@ -34,12 +35,14 @@ export default {
           },
           gray: {
             100: '#F4F4F4',
+            300: '#E6E6E6',
             400: '#5E5E5E'
           },
           green: {
             300: '#23B92A',
             400: '#3DB9BD',
-            500: '#043644'
+            500: '#043644',
+            600: '#27be67'
           }
         }
       },

@@ -8,10 +8,9 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="<?php echo body_class('font-inter') ?>">
-    <header id="masthead" class="fixed top-0 left-0 w-full z-20">
-
-        <div id="upper-bar" class="bg-blue-400 ">
+<body <?php body_class('font-inter'); ?>>
+    <header id="masthead" class="fixed top-0 left-0 w-full z-20 transition duration-300 <?php echo is_page('home') ? '' : 'scrolled';  ?>">
+        <div id="upper-bar" class="bg-blue-400 transition duration-300">
             <div class="container py-4 text-white text-xl flex flex-row flex-wrap justify-between items-center">
                 <div class="flex flex-row flex-nowrap gap-x-6">
                     <p class="font-bold flex flex-row flex-wrap gap-x-2 items-center justify-start">
@@ -39,30 +38,30 @@
             <div class="container flex flex-row flex-nowrap items-center justify-between py-4">
                 <div class="flex flex-row flex-nowrap items-center justify-start gap-x-14">
                     <a href="<?php echo site_url('/'); ?>">
-                        <img src="<?php echo image_dir('logo.svg'); ?>" alt="Logotipo Alves Amorim">
+                        <img id="header-logo" src="<?php echo image_dir('logo.svg'); ?>" alt="Logotipo Alves Amorim">
                     </a>
 
                     <?php
                     $items = [
-                        'Início',
-                        'Serviços',
-                        'Sobre nós',
-                        'Blog',
-                        'Contato'
+                        'Início' => site_url('/'),
+                        'Serviços' => site_url('/servicos'), 
+                        'Sobre nós' => site_url('/sobre-nos'),
+                        'Blog' => site_url('/blog'),
+                        'Contato' => site_url('/contato')
                     ];
                     ?>
 
                     <ul class="text-white text-xl text-white/50 flex flex-row flex-nowrap items-center gap-x-6">
-                        <?php foreach ($items as $item): ?>
+                        <?php foreach ($items as $key => $val): ?>
                             <li class="hover:text-white transition duration-300">
-                                <a href="#">
-                                    <?php echo $item; ?>
+                                <a href="<?php echo $val ?>">
+                                    <?php echo $key ?>
                                 </a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
-                <a class="btn-default text-white font-bold text-base bg-transparent" href="#">
+                <a id="header-btn" class="btn-default text-white font-bold text-base bg-transparent hover:bg-white hover:text-blue-300 transition duration-300" href="#">
                     Fale com um Perito
                 </a>
             </div>

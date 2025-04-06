@@ -21,7 +21,7 @@ get_template_part('includes/components/header', 'header');
                 </p>
                 <a class="btn-default btn-blue" href="">Fale com um Perito</a>
             </div>
-            <img class="h-full" src="<?php echo image_dir('alves-amorim-about-image.png'); ?>" alt="">
+            <img class="h-full object-cover" src="<?php echo image_dir('alves-amorim-about-image.png'); ?>" alt="">
         </div>
     </section>
 

@@ -75,7 +75,7 @@
             <nav class="w-full" id="mobile-nav">
                 <div class="container flex flex-row items-center justify-between py-4">
                     <div class="flex flex-row flex-nowrap items-center gap-x-4">
-                        <button class="hamburger hamburger--3dx" type="button" id="open-menu">
+                        <button class="hamburger hamburger--3d.x" type="button" id="open-menu">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
                             </span>
@@ -153,7 +153,7 @@
 
             <?php if (wp_is_mobile()): ?>
                 <div
-                    class="z-30 bottom-0 left-0 lg:hidden mobile-footer w-screen min-h-[300px] bg-blue-400 text-white flex flex-col gap-y-4 py-8">
+                    class="z-30 bottom-0 left-0 lg:hidden mobile-footer w-screen px-8  bg-blue-400 text-white flex flex-col gap-y-2 py-8">
                     <p class="font-bold flex flex-row flex-wrap gap-x-2 items-center justify-start">
                         <img width="24" height="24" src="<?php echo image_dir('whatsapp.svg'); ?>" alt="Icone do whatsapp">
                         13 98162.8429
@@ -165,10 +165,10 @@
                         </p>
                     </div>
 
-                    <img class="block max-w-[90%] mx-auto filter grayscale invert"
-                        src="<?php echo image_dir('logo-black.svg'); ?>" alt="Logotipo Alves Amorim">
+                    <img class="block w-[60%] mx-auto"
+                        src="<?php echo image_dir('logo-mobile-menu.svg'); ?>" alt="Logotipo Alves Amorim">
 
-                    <div class="w-full flex flex-row items-center justify-center mt-10 gap-x-4">
+                    <div class="w-full flex flex-row items-center justify-center mt-4 gap-x-4">
                         <img width="24" height="24" src="<?php echo image_dir('instagram.svg'); ?>"
                             alt="ícone do instagram em branco">
                         <img width="24" height="24" src="<?php echo image_dir('linkedin.svg'); ?>"

@@ -6,7 +6,14 @@ get_template_part('includes/components/header', 'header');
 <main class="bg-black">
 
     <section class="relative">
-        <div class="container min-h-screen flex flex-col justify-center text-center items-center py-6">
+
+        <div class="overlay absolute top-0 left-0 w-full h-full bg-black/50 z-[2]"></div>
+
+        <video class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop playsinline preload="auto">
+            <source src="<?php echo video_dir('output.mp4'); ?>" type="video/mp4" />
+        </video>
+
+        <div class="container min-h-[90vh] lg:min-h-[110vh] xl:min-h-screen flex flex-col justify-center text-center items-center py-6 z-10 relative">
             <p class="p-4 text-white bg-black/50 rounded-md mb-4">
                 30 anos de Experiência
             </p>
@@ -30,7 +37,7 @@ get_template_part('includes/components/header', 'header');
 
     <section class="bg-blue-400">
         <div
-            class="container py-16 flex flex-col items-start justify-start flex-wrap gap-y-10 lg:gap-y-0 lg:grid lg:grid-cols-3 lg:gap-x-10">
+            class="container py-16 flex flex-col justify-start flex-wrap gap-y-10 lg:gap-y-0 lg:grid lg:grid-cols-3 lg:gap-x-10">
             <div class="bg-black/20 py-8 px-10 rounded-lg">
                 <img width="56" height="56" class="mb-6" src="<?php echo image_dir('icon-values.svg'); ?>"
                     alt="ícone de engrenagem">
@@ -109,7 +116,7 @@ get_template_part('includes/components/header', 'header');
         <img class="absolute left-0 right-0 mx-auto top-[50%] translate-y-[-50%] max-w-[80%]"
             src="<?php echo image_dir('logo-vector-bg-choice.svg'); ?>" alt="">
 
-        <div class="container py-24 relative z-10">
+        <div class="container py-32 relative z-10">
 
             <div class="flex flex-col flex-wrap w-full items-start justify-center text-center mb-10">
                 <p class="tagline text-center w-full">
@@ -298,8 +305,8 @@ get_template_part('includes/components/header', 'header');
                 <?php if (!wp_is_mobile()): ?>
                     <div
                         class="lg:col-span-3 lg:row-span-4 flex flex-col items-start justify-start rounded-xl bg-white overflow-hidden">
-                        <img class="h-full lg:h-auto w-full object-cover" width="730" height="320"
-                            src="https://place-hold.it/780x320" alt="">
+                        <img class="h-full lg:h-auto lg:max-h-[320px] w-full object-cover" width="730" height="320"
+                            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg" alt="">
                         <div class="content p-8">
                             <div class="text-lg text-gray-400 mb-6">
                                 03/03/2025
@@ -314,13 +321,13 @@ get_template_part('includes/components/header', 'header');
                     <div
                         class="lg:col-span-3 lg:row-span-2 lg:col-start-4 flex flex-col lg:flex-row items-start justify-start h-full rounded-xl bg-white overflow-hidden">
                         <img class="h-full w-full lg:w-auto object-cover" width="260" height="220"
-                            src="https://place-hold.it/260x220" alt="" />
+                            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg" alt="" />
                         <div class="content p-4 lg:p-8 flex flex-col items-start justify-end w-full h-full">
                             <div class="text-lg text-gray-400 mb-4">
                                 03/03/2025
                             </div>
                             <h3 class="text-black text-2xl w-full">
-                            Crime cibernético do ECA e o perito atuando pela defesa
+                                Crime cibernético do ECA e o perito atuando pela defesa
                             </h3>
                         </div>
                     </div>
@@ -329,8 +336,8 @@ get_template_part('includes/components/header', 'header');
 
                 <div
                     class="lg:col-span-3 lg:row-span-2 lg:col-start-4 flex flex-col lg:flex-row items-start justify-start h-full rounded-xl bg-white overflow-hidden">
-                    <img class="h-full w-full lg:w-auto object-cover" width="260" height="220"
-                        src="https://place-hold.it/260x220" alt="" />
+                    <img class="h-full w-full lg:w-auto object-cover lg:max-w-[260px] lg:max-h-[230px]" width="260" height="220"
+                        src="https://www.mauritshuis.nl/media/4lrpkto2/rembrandt-van-rijn-de-nachtwacht-rijksmuseum-amsterdam.jpg?width=1200&height=0&quality=70&v=1d794e12cb8a5d0" alt="" />
                     <div class="content p-4 lg:p-8 flex flex-col items-start justify-end w-full h-full">
                         <div class="text-lg text-gray-400 mb-4">
                             03/03/2025
@@ -344,8 +351,8 @@ get_template_part('includes/components/header', 'header');
                 <div
                     class="lg:col-span-3 lg:row-span-2 lg:col-start-4 lg:row-start-3 flex flex-col lg:flex-row items-start justify-start h-full rounded-xl bg-white overflow-hidden">
 
-                    <img class="h-full w-full lg:w-auto object-cover" width="260" height="220" src="https://place-hold.it/260x220"
-                        alt="" />
+                    <img class="h-full w-full lg:w-auto object-cover lg:max-w-[260px] lg:max-h-[230px]" width="260" height="220"
+                        src="https://media.timeout.com/images/105293264/750/562/image.jpg" alt="" />
                     <div class="content p-4 lg:p-8 flex flex-col items-start justify-end w-full h-full">
                         <div class="text-lg text-gray-400 mb-4">
                             03/03/2025

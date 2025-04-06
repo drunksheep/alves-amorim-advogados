@@ -6,6 +6,12 @@ function image_dir($path)
     return get_stylesheet_directory_uri() . '/src/assets/images/' . $path;
 }
 
+function video_dir($path)
+{
+    return get_stylesheet_directory_uri() . '/src/assets/videos/' . $path;
+}
+
+
 function get_menu_tree($menu_slug)
 {
     $menu = wp_get_nav_menu_object($menu_slug);

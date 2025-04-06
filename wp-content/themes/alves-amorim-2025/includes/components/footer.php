@@ -77,7 +77,7 @@
     <div class="container pb-20 flex flex-col lg:flex-row flex-wrap lg:flex-nowrap items-center lg:justify-between gap-y-6 lg:gap-y-0">
         <div class="flex flex-col lg:flex-row flex-wrap items-center justify-start lg:gap-x-6 gap-y-6 lg:gap-y-0">
             <a href="<?php echo site_url('/'); ?>">
-                <img class="max-w-[120px] lg:max-w-full" width="232" height="160" src="<?php echo image_dir('logo.svg'); ?>" alt="">
+                <img class="max-w-[120px] lg:max-w-full" width="232" height="160" src="<?php echo image_dir('logo-footer.svg'); ?>" alt="">
             </a>
             <p class="text-xl text-gray-400">
                 ALVES AMORIM PERÍCIA DIGITAL <br />

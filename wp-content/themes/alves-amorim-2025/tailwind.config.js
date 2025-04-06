@@ -9,9 +9,9 @@ export default {
       container: {
         center: true,
         screens: {
-          'xs':'320px',
+          'xs':'310px',
           'sm': '340px',
-          'md': '640px',
+          'md': '340px',
           'lg': '1300px',
           'xl': '1600px',
         },
@@ -22,7 +22,7 @@ export default {
           nexa: ['Nexa', 'sans-serif']
         },
         screens: {
-          'xs':'320px',
+          'xs':'310px',
           'sm': '640px',
           'md': '768px',
           'lg': '1024px',

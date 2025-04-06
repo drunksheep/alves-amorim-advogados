@@ -22,7 +22,7 @@ get_template_part('includes/components/header', 'header');
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-4 lg:gap-x-10 gap-y-8 lg:gap-y-0">
+            <div class="grid grid-cols-1 lg:grid-cols-4 lg:gap-x-4 gap-y-8 lg:gap-y-0">
 
                 <div class="service-item group hover:bg-blue-300 druation-300 transition">
                     <img class="mb-6 filter group-hover:brightness-0 group-hover:invert transition duration-300"
